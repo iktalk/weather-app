@@ -1,4 +1,4 @@
-.container {
+.weather-app {
   display: block;
   border: 9px solid #385170;
   border-radius: 30px;
@@ -81,4 +81,8 @@ a {
 .weekday,
 .weekday-temperature {
   padding-top: 25px;
+}
+
+.code-link {
+  text-align: center;
 }
