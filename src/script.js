@@ -65,7 +65,7 @@ function searchCity(city) {
 }
 
 function citySubmission(event) {
-  event.preventDefault;
+  event.preventDefault();
   let city = document.querySelector("#search-bar-input").value;
   searchCity(city);
 }
@@ -82,7 +82,7 @@ function retrieveCurrentPosition(position) {
 }
 
 function getCurrentLocation(event) {
-  event.preventDefault;
+  event.preventDefault();
   navigator.geolocation.getCurrentPosition(retrieveCurrentPosition);
 }
 
