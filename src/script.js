@@ -54,10 +54,10 @@ function showTemperature(response) {
   let windSpeed = Math.round(response.data.wind.speed);
   let windSpeedElement = document.querySelector("#current-wind");
   windSpeedElement.innerHTML = `Wind: ${windSpeed} km/h`;
-  let icon = response.data.weather[0].icon;
+  let iconElement = document.querySelector("#icon-img");
   iconElement.setAttribute(
     "src",
-    `http://openweathermap.org/mg/wn/${icon}@2x.png`
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
 }
 
