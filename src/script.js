@@ -37,8 +37,6 @@ changeFahrenheitTemp.addEventListener("click", function (event) {
 });
 
 function showTemperature(response) {
-  console.log(response.data);
-
   let city = response.data.name;
   let cityElement = document.querySelector("#current-city");
   cityElement.innerHTML = `${city}`;
