@@ -23,7 +23,6 @@ let day = days[now.getDay()];
 h2.innerHTML = `${day} ${hours}:${minutes}`;
 
 function showTemperature(response) {
-  console.log(response.data);
   celsiusTemperature = response.data.main.temp;
   let city = response.data.name;
   let cityElement = document.querySelector("#current-city");
