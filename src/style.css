@@ -101,6 +101,7 @@ a {
 .code-link {
   text-align: center;
   color: #414345;
+  margin-top: 3px;
 }
 
 .active {
