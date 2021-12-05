@@ -1,17 +1,18 @@
 .weather-app {
   display: block;
-  border: 9px solid #385170;
+  border: 9px solid #aac7e3;
   width: 550px;
   padding: 15px;
   margin-right: auto;
   margin-left: auto;
   border-radius: 16px;
-  box-shadow: 0 30px 50px rgb(152 155 163 / 50%);
+  box-shadow: 0 30px 50px rgb(152 155 163 / 12%);
 }
 
 h1,
 h5 {
   font-family: "Montserrat", sans-serif;
+  color: #414345;
 }
 
 h1 {
@@ -19,6 +20,7 @@ h1 {
   padding: 10px;
   margin-right: -15px;
   margin-left: -15px;
+  font-size: 35px;
 }
 
 h2 {
@@ -26,13 +28,13 @@ h2 {
 }
 
 #search-form {
-  background-color: #385170;
+  background-color: #aac7e3;
   padding: 12px;
   margin: -15px;
 }
 
 #current-date {
-  background-color: #385170;
+  background-color: #aac7e3;
   margin-left: -15px;
   margin-right: -15px;
   margin-top: -8px;
@@ -41,6 +43,7 @@ h2 {
   padding-left: 11px;
   color: white;
   font-weight: 100;
+  font-size: 20px;
 }
 
 #description {
@@ -60,6 +63,7 @@ a {
   padding-left: 10px;
   font-family: "Raleway", sans-serif;
   list-style: none;
+  color: #414345;
 }
 
 .temperature-date {
@@ -71,12 +75,14 @@ a {
   font-family: "Raleway", sans-serif;
   list-style: none;
   padding-left: 0px;
+  color: #414345;
 }
 
 .list-group {
   text-align: center;
   font-family: "Raleway", sans-serif;
   font-size: 20px;
+  color: #414345;
 }
 
 .weather-icon-weekly {
@@ -90,6 +96,7 @@ a {
 
 .code-link {
   text-align: center;
+  color: #414345;
 }
 
 .active {

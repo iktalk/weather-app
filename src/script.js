@@ -23,10 +23,14 @@ let day = days[now.getDay()];
 h2.innerHTML = `${day} ${hours}:${minutes}`;
 
 function showTemperature(response) {
+  console.log(response.data);
   celsiusTemperature = response.data.main.temp;
   let city = response.data.name;
   let cityElement = document.querySelector("#current-city");
-  cityElement.innerHTML = `${city}`;
+  cityElement.innerHTML = `${city},`;
+  let country = response.data.sys.country;
+  let countryElement = document.querySelector("#current-country");
+  countryElement.innerHTML = `${country}`;
   let temperature = Math.round(response.data.main.temp);
   let temperatureElement = document.querySelector("#current-temp");
   temperatureElement.innerHTML = `${temperature}`;
