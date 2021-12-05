@@ -27,6 +27,10 @@ h2 {
   margin-bottom: 0px;
 }
 
+h5 {
+  margin-bottom: 20px;
+}
+
 #search-form {
   background-color: #aac7e3;
   padding: 12px;
@@ -124,7 +128,12 @@ a {
   width: 75%;
 }
 
-.monday-weather {
+.daily-weather {
   list-style: none;
   padding-left: 0px;
+  text-align: center;
+}
+
+.five-day-forecast {
+  padding-left: 25px;
 }
