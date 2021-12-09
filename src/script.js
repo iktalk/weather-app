@@ -48,6 +48,35 @@ function showTemperature(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+  displayForecast();
+}
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class ="row">`;
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+        <div class="col">
+          <ul class="daily-weather">
+            <li>${day}</li>
+            <li>
+              <img
+                class="weather-icon-weekly"
+                src="images/sunny.svg"
+                alt="Partly Cloudy"
+              />
+            </li>
+            <li class="forecast-temperature> <span class="forecast-max"> 18°C </span> | 
+            <span class="forecast-min"> 10°C </span> </li>
+          </ul>
+        </div>
+        `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
 }
 
 function searchCity(city) {
