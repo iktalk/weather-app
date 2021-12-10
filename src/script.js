@@ -22,6 +22,19 @@ let days = [
 let day = days[now.getDay()];
 h2.innerHTML = `${day} ${hours}:${minutes}`;
 
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "ceb85c7e88b87ff60bd3e2793c0afe79";
+  let units = "metric";
+  let latitude = coordinates.lat;
+  let longitude = coordinates.lon;
+
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
+
+  console.log(apiUrl);
+  axios.get(apiUrl).then(displayForecast);
+}
+
 function showTemperature(response) {
   celsiusTemperature = response.data.main.temp;
   let city = response.data.name;
@@ -48,10 +61,12 @@ function showTemperature(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
-  displayForecast();
+  getForecast(response.data.coord);
+  console.log(response.data);
 }
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class ="row">`;
   let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
@@ -69,8 +84,8 @@ function displayForecast() {
                 alt="Partly Cloudy"
               />
             </li>
-            <li class="forecast-temperature> <span class="forecast-max"> 18°C </span> | 
-            <span class="forecast-min"> 10°C </span> </li>
+            <li class="forecast-temperature> <span id="forecast-max"> 18°C </span> | 
+            <span id="forecast-min"> 10°C </span> </li>
           </ul>
         </div>
         `;
