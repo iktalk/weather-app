@@ -23,7 +23,6 @@ let day = days[now.getDay()];
 h2.innerHTML = `Last Updated: ${day} ${hours}:${minutes}`;
 
 function getForecast(coordinates) {
-  console.log(coordinates);
   let apiKey = "ceb85c7e88b87ff60bd3e2793c0afe79";
   let units = "metric";
   let latitude = coordinates.lat;
@@ -31,7 +30,6 @@ function getForecast(coordinates) {
 
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
 
-  console.log(apiUrl);
   axios.get(apiUrl).then(displayForecast);
 }
 
@@ -62,7 +60,6 @@ function showTemperature(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
   getForecast(response.data.coord);
-  console.log(response.data);
 }
 
 function formatDay(timestamp) {
@@ -73,7 +70,6 @@ function formatDay(timestamp) {
 }
 
 function displayForecast(response) {
-  console.log(response.data.daily);
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class ="row">`;
