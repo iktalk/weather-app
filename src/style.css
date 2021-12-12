@@ -50,8 +50,8 @@ h5 {
   text-transform: capitalize;
 }
 
-a {
-  text-decoration: none;
+#current-wind {
+  margin-left: -5px;
 }
 
 .temperature-degrees {
@@ -61,16 +61,15 @@ a {
 .temperature-date,
 .description {
   list-style: none;
-
   text-align: center;
   padding-left: 0px;
   margin-top: 31px;
+  margin-left: 0px;
 }
 
 .date-time {
   text-align: center;
   list-style: none;
-
   text-align: center;
   padding-left: 0px;
 }
@@ -95,15 +94,6 @@ a {
   margin-top: 3px;
 }
 
-.active {
-  color: black;
-  cursor: default;
-}
-
-.active:hover {
-  text-decoration: none;
-}
-
 .units {
   font-size: 15px;
   position: relative;
@@ -112,6 +102,7 @@ a {
 
 #current-temp {
   font-size: 40px;
+  margin-left: -25px;
 }
 
 #icon-img {
