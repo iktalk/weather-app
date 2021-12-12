@@ -48,23 +48,28 @@ h5 {
 
 #description {
   text-transform: capitalize;
-}
-
-#current-wind {
-  margin-left: -5px;
+  font-size: 13px;
 }
 
 .temperature-degrees {
   font-size: 20px;
 }
 
-.temperature-date,
-.description {
+.temperature-date {
   list-style: none;
   text-align: center;
   padding-left: 0px;
   margin-top: 31px;
   margin-left: 0px;
+}
+
+.description {
+  list-style: none;
+  text-align: left;
+  padding-left: 0px;
+  margin-top: 31px;
+  margin-left: 0px;
+  font-size: 13px;
 }
 
 .date-time {
@@ -102,13 +107,13 @@ h5 {
 
 #current-temp {
   font-size: 40px;
-  margin-left: -25px;
+  margin-left: -10px;
 }
 
 #icon-img {
   display: block;
   margin: auto;
-  width: 75%;
+  width: 100%;
 }
 
 .daily-weather {
