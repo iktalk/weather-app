@@ -20,7 +20,7 @@ let days = [
   "Saturday",
 ];
 let day = days[now.getDay()];
-h2.innerHTML = `${day} ${hours}:${minutes}`;
+h2.innerHTML = `Last Updated: ${day} ${hours}:${minutes}`;
 
 function getForecast(coordinates) {
   console.log(coordinates);
@@ -96,10 +96,10 @@ function displayForecast(response) {
             </li>
             <li class="forecast-temperature> <span id="forecast-max"> ${Math.round(
               forecastDay.temp.max
-            )}°C </span> | 
+            )}° </span> | 
             <span id="forecast-min"> ${Math.round(
               forecastDay.temp.min
-            )}°C </span> </li>
+            )}° </span> </li>
           </ul>
         </div>
         `;

@@ -1,16 +1,12 @@
 .weather-app {
   display: block;
-  border: 9px solid #aac7e3;
+  border: 5px solid #aac7e3;
   width: 610px;
   padding: 15px;
   margin-right: auto;
   margin-left: auto;
   border-radius: 16px;
   box-shadow: 0 30px 50px rgb(152 155 163 / 12%);
-}
-
-h1,
-h5 {
   font-family: "Montserrat", sans-serif;
   color: #414345;
 }
@@ -59,34 +55,29 @@ a {
 }
 
 .temperature-degrees {
-  font-size: 18px;
+  font-size: 20px;
 }
 
+.temperature-date,
 .description {
-  padding-top: 26px;
-  padding-left: 10px;
-  font-family: "Raleway", sans-serif;
   list-style: none;
-  color: #414345;
-}
 
-.temperature-date {
-  padding-top: 20px;
-  padding-left: 30px;
+  text-align: center;
+  padding-left: 0px;
+  margin-top: 31px;
 }
 
 .date-time {
-  font-family: "Raleway", sans-serif;
+  text-align: center;
   list-style: none;
+
+  text-align: center;
   padding-left: 0px;
-  color: #414345;
 }
 
 .list-group {
   text-align: center;
-  font-family: "Raleway", sans-serif;
   font-size: 20px;
-  color: #414345;
 }
 
 .weather-icon-weekly {
@@ -100,7 +91,7 @@ a {
 
 .code-link {
   text-align: center;
-  color: #414345;
+
   margin-top: 3px;
 }
 
@@ -133,8 +124,14 @@ a {
   list-style: none;
   padding-left: 0px;
   text-align: center;
+  font-size: 13px;
+  text-align: center;
 }
 
 .five-day-forecast {
   margin-left: 12px;
+}
+
+#forecast-min {
+  color: #8a8e91;
 }
